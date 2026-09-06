@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pocketmortar.com/sitemap.xml
+Sitemap: https://artywithfriends.com/sitemap.xml

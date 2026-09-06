@@ -2,7 +2,7 @@
    FOOTER
    ========================= */
 
-// Pocket Mortar fork: no partner links.
+// Arty With Friends fork: no partner links.
 const FOOTER_PARTNERS = [];
 
 function createFooterPartner(partner) {

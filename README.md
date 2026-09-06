@@ -1,6 +1,6 @@
-# Pocket Mortar
+# Arty With Friends
 
-**Pocket Mortar is a fork of [WARDOGS Artillery Calculator](https://github.com/apollyon-sys/wardogs-calculator) by [Apollyon](https://github.com/apollyon-sys)**, made with the author's permission and released under the same [MIT License](LICENSE). The original project and its author deserve the credit for everything the calculator does today. Live at **https://pocketmortar.com/**.
+**Arty With Friends is a fork of [WARDOGS Artillery Calculator](https://github.com/apollyon-sys/wardogs-calculator) by [Apollyon](https://github.com/apollyon-sys)**, made with the author's permission and released under the same [MIT License](LICENSE). The original project and its author deserve the credit for everything the calculator does today. Live at **https://artywithfriends.com/**.
 
 What this fork changes:
 
@@ -8,7 +8,7 @@ What this fork changes:
 - **Group / cooperative targeting** (in development): share a target list with your squad using a short code, with an optional passcode, so several mortars and guns can work the same targets. Each member's range and MIL are computed locally from their own position.
 - Branding and domain. Nothing else is intentionally different, and improvements are offered back upstream as pull requests.
 
-Branch layout: `main` tracks upstream unchanged (for clean pull requests); `site` carries the fork-only changes and is what deploys to pocketmortar.com.
+Branch layout: `main` tracks upstream unchanged (for clean pull requests); `site` carries the fork-only changes and is what deploys to artywithfriends.com.
 
 ---
 

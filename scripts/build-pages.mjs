@@ -526,8 +526,8 @@ function applySeoV2(
 
 function mobileUrlForLanguage(language) {
     return language === 'en'
-        ? 'https://pocketmortar.com/mobile/'
-        : `https://pocketmortar.com/mobile/${language}/`;
+        ? 'https://artywithfriends.com/mobile/'
+        : `https://artywithfriends.com/mobile/${language}/`;
 }
 
 function addMobileAlternate(html, language) {
@@ -644,8 +644,8 @@ function escapeXml(value) {
 
 function desktopUrlForLanguage(language) {
     return language === 'en'
-        ? 'https://pocketmortar.com/'
-        : `https://pocketmortar.com/${language}/`;
+        ? 'https://artywithfriends.com/'
+        : `https://artywithfriends.com/${language}/`;
 }
 
 async function buildSitemap() {
@@ -659,7 +659,7 @@ async function buildSitemap() {
             `    <xhtml:link rel="alternate" hreflang="${escapeXml(language)}" href="${escapeXml(desktopUrlForLanguage(language))}" />`
         ))
         .concat(
-            '    <xhtml:link rel="alternate" hreflang="x-default" href="https://pocketmortar.com/" />'
+            '    <xhtml:link rel="alternate" hreflang="x-default" href="https://artywithfriends.com/" />'
         )
         .join('\n');
 
@@ -693,8 +693,8 @@ function renderMobileLocale(template, language) {
     const isDefault = language === 'en';
 
     const desktopCanonical = isDefault
-        ? 'https://pocketmortar.com/'
-        : `https://pocketmortar.com/${language}/`;
+        ? 'https://artywithfriends.com/'
+        : `https://artywithfriends.com/${language}/`;
 
     const baseHref = isDefault
         ? '../'
@@ -720,7 +720,7 @@ function renderMobileLocale(template, language) {
             `<base href="${baseHref}"/>`
         )
         .replace(
-            '<link href="https://pocketmortar.com/" rel="canonical"/>',
+            '<link href="https://artywithfriends.com/" rel="canonical"/>',
             `<link href="${desktopCanonical}" rel="canonical"/>`
         )
         .replace(

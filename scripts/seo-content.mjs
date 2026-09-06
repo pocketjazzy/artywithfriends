@@ -1,6 +1,6 @@
 export const SEO_PAGE_CONTENT = {
     en: {
-        title: 'Pocket Mortar | WARDOGS Artillery Calculator, Mortar, SPH-2 & Maps',
+        title: 'Arty With Friends | WARDOGS Artillery Calculator, Mortar, SPH-2 & Maps',
         description: 'Free WARDOGS artillery and mortar calculator for SPH-2 and Mortar with Bakurani/Ozeti maps, Terrain3D MIL correction, contours and tactical tools.',
         heading: 'About this calculator',
         intro: 'WARDOGS Artillery Calculator is a free, open-source community tool for mortar and SPH-2 firing solutions. It includes interactive tactical maps for Bakurani and Ozeti, coordinate-based targeting, distance, azimuth and MIL calculations, terrain contours, and experimental Terrain3D MIL correction for SPH-2 where supported.',
@@ -243,6 +243,6 @@ export const SEO_PAGE_CONTENT = {
 };
 
 export const SEO_ALTERNATE_NAMES = [
-    'Pocket Mortar — WARDOGS Artillery Calculator & Tactical Map',
+    'Arty With Friends — WARDOGS Artillery Calculator & Tactical Map',
     'WARDOGS Arty Calc'
 ];

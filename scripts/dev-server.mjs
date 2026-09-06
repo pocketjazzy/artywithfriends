@@ -204,8 +204,8 @@ function renderMobileLocale(
 
     const desktopCanonical =
         isDefault
-            ? 'https://pocketmortar.com/'
-            : `https://pocketmortar.com/${language}/`;
+            ? 'https://artywithfriends.com/'
+            : `https://artywithfriends.com/${language}/`;
 
     const baseHref =
         isDefault
@@ -222,7 +222,7 @@ function renderMobileLocale(
             `<base href="${baseHref}"/>`
         )
         .replace(
-            '<link href="https://pocketmortar.com/" rel="canonical"/>',
+            '<link href="https://artywithfriends.com/" rel="canonical"/>',
             `<link href="${desktopCanonical}" rel="canonical"/>`
         )
         .replace(
