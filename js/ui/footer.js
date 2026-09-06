@@ -2,14 +2,8 @@
    FOOTER
    ========================= */
 
-const FOOTER_PARTNERS = [
-    {
-        id: 'wardogs-hub',
-        label: 'Community partner',
-        name: 'WARDOGSHUB',
-        url: 'https://wardogshub.net/?utm_source=wardogs-artillery&utm_medium=partner&utm_campaign=footer'
-    }
-];
+// Pocket Mortar fork: no partner links.
+const FOOTER_PARTNERS = [];
 
 function createFooterPartner(partner) {
     const item =
@@ -216,6 +210,66 @@ function renderFooter() {
     meta.appendChild(
         author
     );
+
+    // Attribution to the original project (MIT). Kept in config so it can't
+    // be lost in a merge: see config/app.json -> site.footer.basedOn*.
+    if (config.basedOnUrl) {
+        const basedOn =
+            document.createElement(
+                'span'
+            );
+
+        basedOn.className =
+            'footer-based-on';
+
+        basedOn.append(
+            document.createTextNode(
+                `${config.basedOnLabel || 'Based on'} `
+            )
+        );
+
+        const projectLink =
+            document.createElement(
+                'a'
+            );
+
+        projectLink.href =
+            config.basedOnUrl;
+
+        projectLink.target =
+            '_blank';
+
+        projectLink.rel =
+            'noopener noreferrer';
+
+        projectLink.textContent =
+            config.basedOnName ||
+            'WARDOGS Artillery Calculator';
+
+        basedOn.appendChild(
+            projectLink
+        );
+
+        if (config.basedOnAuthorName) {
+            basedOn.append(
+                document.createTextNode(
+                    ` by ${config.basedOnAuthorName}`
+                )
+            );
+        }
+
+        if (config.basedOnLicense) {
+            basedOn.append(
+                document.createTextNode(
+                    ` (${config.basedOnLicense})`
+                )
+            );
+        }
+
+        meta.appendChild(
+            basedOn
+        );
+    }
 
     if (disclaimer.textContent) {
         footer.appendChild(

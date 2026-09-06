@@ -29,7 +29,7 @@ const dist = join(
 );
 
 const UMAMI_PRODUCTION_DOMAIN =
-    'wardogs-artillery.com';
+    'pocketmortar.com';
 
 async function listFilesRecursive(directory) {
     const entries = await readdir(
