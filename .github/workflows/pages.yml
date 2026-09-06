@@ -3,7 +3,7 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-      - main
+      - site-collab
   workflow_dispatch:
 
 permissions:
@@ -33,6 +33,9 @@ jobs:
           node-version: 20
 
       - name: Build desktop + mobile
+        env:
+          COLLAB_URL: ${{ vars.COLLAB_URL }}
+          TILE_BASE_URL: ${{ vars.TILE_BASE_URL }}
         run: npm run build
 
       - name: Setup Pages

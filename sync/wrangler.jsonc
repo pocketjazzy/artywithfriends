@@ -1,6 +1,6 @@
 {
     "$schema": "node_modules/wrangler/config-schema.json",
-    "name": "wardogs-sync",
+    "name": "artywithfriends-sync",
     "main": "src/index.js",
     "compatibility_date": "2026-04-07",
 
@@ -8,12 +8,12 @@
         "enabled": true
     },
 
-    // Wrangler creates the DNS record itself on deploy, since olm.pet is
+    // Wrangler creates the DNS record itself on deploy, since artywithfriends.com is
     // already on Cloudflare nameservers. Delete this block to fall back to
     // the free wardogs-sync.<subdomain>.workers.dev hostname instead.
     "routes": [
         {
-            "pattern": "wardogs-map-sync.olm.pet",
+            "pattern": "sync.artywithfriends.com",
             "custom_domain": true
         }
     ],
@@ -46,6 +46,6 @@
         // enumerate. Requests with no Origin header (curl, native clients,
         // the test suite) are allowed through — an origin allowlist is a
         // browser-tab defence, not authentication.
-        "ALLOWED_ORIGINS": "https://wardogs-map.olm.pet,http://localhost:8000,http://127.0.0.1:8000"
+        "ALLOWED_ORIGINS": "https://artywithfriends.com,https://www.artywithfriends.com,http://localhost:8000,http://127.0.0.1:8000"
     }
 }

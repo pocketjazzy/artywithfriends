@@ -2,14 +2,8 @@
    FOOTER
    ========================= */
 
-const FOOTER_PARTNERS = [
-    {
-        id: 'wardogs-hub',
-        label: 'Community partner',
-        name: 'WARDOGSHUB',
-        url: 'https://wardogshub.net/?utm_source=wardogs-artillery&utm_medium=partner&utm_campaign=footer'
-    }
-];
+// Arty With Friends fork: no partner links.
+const FOOTER_PARTNERS = [];
 
 function createFooterPartner(partner) {
     const item =
@@ -216,6 +210,43 @@ function renderFooter() {
     meta.appendChild(
         author
     );
+
+    // Attribution to the original project and the shared-sessions author.
+    // Config-driven so a merge can't lose it: config/app.json -> site.footer.
+    function appendCredit(labelText, name, url, suffix) {
+        const span = document.createElement('span');
+        span.className = 'footer-based-on';
+        span.append(document.createTextNode(labelText + ' '));
+        const link = document.createElement('a');
+        link.href = url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = name;
+        span.appendChild(link);
+        if (suffix) {
+            span.append(document.createTextNode(suffix));
+        }
+        meta.appendChild(span);
+    }
+
+    if (config.basedOnUrl) {
+        appendCredit(
+            config.basedOnLabel || 'Based on',
+            config.basedOnName || 'WARDOGS Artillery Calculator',
+            config.basedOnUrl,
+            (config.basedOnAuthorName ? ' by ' + config.basedOnAuthorName : '') +
+            (config.basedOnLicense ? ' (' + config.basedOnLicense + ')' : '')
+        );
+    }
+
+    if (config.creditUrl) {
+        appendCredit(
+            config.creditLabel || 'With thanks to',
+            config.creditName || '',
+            config.creditUrl,
+            ''
+        );
+    }
 
     if (disclaimer.textContent) {
         footer.appendChild(

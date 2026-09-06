@@ -1,3 +1,20 @@
+# Arty With Friends
+
+**Arty With Friends is a fork of [WARDOGS Artillery Calculator](https://github.com/apollyon-sys/wardogs-calculator) by [Apollyon](https://github.com/apollyon-sys)**, made with the author's permission and released under the same [MIT License](LICENSE). The shared-session (multiplayer room) system is the work of [Crecket](https://github.com/Crecket/wardogs-calculator). Live at **https://artywithfriends.com/**.
+
+What this fork changes:
+
+- **No analytics, no tracking, no ads, no donations.**
+- **Shared sessions enabled** against a relay on our own Cloudflare account, with map tiles served from our own hosting.
+- Planned additions on top of shared sessions: creator's name on each shared target, a view-only mode, default rank-and-animal nicknames. Offered back upstream as pull requests.
+- Branding and domain. Nothing else is intentionally different.
+
+Branch layout: `main` tracks upstream unchanged; `collab-eval` tracks Crecket's `feat/collab-rooms`; `site-collab` = that plus the fork-only changes, and is what deploys to artywithfriends.com.
+
+---
+
+## Original project README
+
 # WARDOGS Artillery Calculator
 
 [![Live App](https://img.shields.io/badge/Live-wardogs--artillery.com-d7a452?style=flat-square)](https://wardogs-artillery.com/)

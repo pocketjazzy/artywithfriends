@@ -12,7 +12,7 @@ import { ZH_CN_SEO } from './zh-cn-seo.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 const dist = join(root, 'dist');
-const SITE_ORIGIN = 'https://wardogs-artillery.com';
+const SITE_ORIGIN = 'https://artywithfriends.com';
 const DEFAULT_LANGUAGE = 'en';
 const ZH_CN_ID = 'zh-cn';
 

@@ -214,8 +214,8 @@ function renderMobileLocale(
 
     const desktopCanonical =
         isDefault
-            ? 'https://wardogs-artillery.com/'
-            : `https://wardogs-artillery.com/${language}/`;
+            ? 'https://artywithfriends.com/'
+            : `https://artywithfriends.com/${language}/`;
 
     const baseHref =
         isDefault
@@ -232,7 +232,7 @@ function renderMobileLocale(
             `<base href="${baseHref}"/>`
         )
         .replace(
-            '<link href="https://wardogs-artillery.com/" rel="canonical"/>',
+            '<link href="https://artywithfriends.com/" rel="canonical"/>',
             `<link href="${desktopCanonical}" rel="canonical"/>`
         )
         .replace(
