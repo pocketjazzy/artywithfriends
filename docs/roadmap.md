@@ -43,7 +43,7 @@ Fork, `site` branch, attribution, tracker removed, domain, Pages deploy, HTTPS. 
 | Shared target list, each viewer computes their own solution | Yes — saved targets, artillery/target positions, drawings and markers are shared; zoom/pan/layers stay local |
 | Relay on Cloudflare, in-memory, low cost | Yes — Worker + Durable Object, hibernation, SQLite-backed, per-fork relay URL injected at build time |
 | Limits | 16 peers + 8 read-only viewers, room lives 2 weeks after last change |
-| **Optional 4-digit passcode** | **No** — the code is the only credential |
+| Optional 4-digit passcode (dropped for now) | No — the code is the only credential |
 | **View-only vs collaborate mode** | **Partly** — a read-only "viewer" flag exists for the OBS overlay, not as an owner-set mode |
 | **Creator's name on each target** | **No** |
 | **Default rank+animal nicknames** | **No** — blank until typed |
@@ -63,13 +63,14 @@ Whatever the branch decision, the relay is ours to run: Worker + Durable Object 
 
 ### B3 — Our additions (as PRs to Crecket's branch or upstream, whichever is live)
 
-In order of value:
+In order of value (decided 2026-09-06):
 
-1. **Optional 4-digit passcode** set by the room creator; the join dialog asks for it when set.
-2. **Creator's nickname on each shared target**, in the creator's colour.
-3. **View-only / collaborate mode** as a creator-set switch, building on the existing viewer flag.
-4. **Default nicknames**: military rank + animal from a large list, editable, remembered on the device.
-5. Configurable peer cap and room lifetime (already server-side constants).
+1. **Creator's nickname on each shared target**, in the creator's colour.
+2. **View-only / collaborate mode** as a creator-set switch, building on the existing viewer flag.
+3. **Default nicknames**: military rank + animal from a large list, editable, remembered on the device.
+4. Configurable peer cap and room lifetime (already server-side constants).
+
+Dropped for now: the optional 4-digit passcode. The room code is unguessable on its own; revisit only if uninvited joins turn out to be a real problem.
 
 Coordinate on issue #5 before starting so Crecket and Apollyon know what's coming; ask which pieces they'd rather do themselves.
 
